@@ -8,15 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using NadinSoftTask.Application.Interfaces;
 using NadinSoftTask.Application.Services;
+using AutoMapper;
+using NadinSoftTask.Application.Profiles;
 
 namespace NadinSoftTask.Infra.Ioc
 {
     public class DependencyContainer 
     {
-        public static void RegisterServices(IServiceCollection service)
+        public static void ConfigureServices(IServiceCollection services)
         {
-            service.AddScoped<IproductRepository, ProductRepository>();
-            service.AddScoped<IProductServices, ProductService>();
+            services.AddScoped<IproductRepository, ProductRepository>();
+            services.AddScoped<IProductServices, ProductService>();
+
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfiles());
+            });
+
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
         }
     }
 }

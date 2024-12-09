@@ -13,7 +13,7 @@ builder.Services.AddSwaggerGen();
 
 var connection = builder.Configuration.GetConnectionString("NadinTaskConnection");
 builder.Services.AddDbContext<NadinTaskDB>(a => a.UseSqlServer(connection));
-DependencyContainer.RegisterServices(builder.Services);
+DependencyContainer.ConfigureServices(builder.Services);
 
 var app = builder.Build();
 

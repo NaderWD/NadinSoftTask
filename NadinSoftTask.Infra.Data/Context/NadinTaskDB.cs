@@ -10,11 +10,17 @@ namespace NadinSoftTask.Infra.Data.Context
 {
     public class NadinTaskDB : DbContext
     {
-        public NadinTaskDB(DbContextOptions options) : base(options)
+        public NadinTaskDB(DbContextOptions<NadinTaskDB> options) : base(options)
         {
-            
+
         }
 
-        public DbSet<Product> Products { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Product>().HasNoKey();
+        }
     }
 }
+
