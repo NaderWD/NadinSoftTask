@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using NadinSoftTask.Domain.Models;
-using NadinSoftTask.Domain.ViewModels;
+using NadinSoftTask.Application.ViewModels;
 
 namespace NadinSoftTask.Application.Profiles
 {
