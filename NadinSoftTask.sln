@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NadinSoftTask.Domain", "NadinSoftTask.Domain\NadinSoftTask.Domain.csproj", "{596AED6D-47CF-46AF-9459-5A5D63524E02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NadinSoftTask.Application", "NadinSoftTask.Application\NadinSoftTask.Application.csproj", "{7B4B9B08-D956-4C61-B3C3-24263B8DAE62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,11 +27,16 @@ Global
 		{596AED6D-47CF-46AF-9459-5A5D63524E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{596AED6D-47CF-46AF-9459-5A5D63524E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{596AED6D-47CF-46AF-9459-5A5D63524E02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B4B9B08-D956-4C61-B3C3-24263B8DAE62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B4B9B08-D956-4C61-B3C3-24263B8DAE62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B4B9B08-D956-4C61-B3C3-24263B8DAE62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B4B9B08-D956-4C61-B3C3-24263B8DAE62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{596AED6D-47CF-46AF-9459-5A5D63524E02} = {0C5D911F-E91A-498C-BBBA-8887C44ED982}
+		{7B4B9B08-D956-4C61-B3C3-24263B8DAE62} = {B1BFCF03-9299-4F8F-993D-2407B9395A47}
 	EndGlobalSection
 EndGlobal
