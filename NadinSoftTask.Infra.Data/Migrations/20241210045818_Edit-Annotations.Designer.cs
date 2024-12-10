@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NadinSoftTask.Infra.Data.Context;
 
@@ -11,9 +12,11 @@ using NadinSoftTask.Infra.Data.Context;
 namespace NadinSoftTask.Infra.Data.Migrations
 {
     [DbContext(typeof(NadinTaskDB))]
-    partial class NadinTaskDBModelSnapshot : ModelSnapshot
+    [Migration("20241210045818_Edit-Annotations")]
+    partial class EditAnnotations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
