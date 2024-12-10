@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{0C5D911F-E91A-498C-BBBA-8887C44ED982}"
 EndProject
@@ -22,6 +22,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NadinSoftTask.Infra.Ioc", "NadinSoftTask.Infra.Ioc\NadinSoftTask.Infra.Ioc.csproj", "{01285874-7C86-421D-A510-8FB850FEFE64}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NadinSoftTask.Presentation.WebAPI", "NadinSoftTask.Presentation.WebAPI\NadinSoftTask.Presentation.WebAPI.csproj", "{0F0C0BE3-DEA8-44E1-B6BD-A2E0D7D2FE95}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{F92AD5D3-6C31-457B-A6B0-63B500EC5987}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NadinSoftTask.Test", "NadinSoftTask.Test\NadinSoftTask.Test.csproj", "{7B573F80-4035-45B1-90A2-8ECC0E08BB18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,10 @@ Global
 		{0F0C0BE3-DEA8-44E1-B6BD-A2E0D7D2FE95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F0C0BE3-DEA8-44E1-B6BD-A2E0D7D2FE95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F0C0BE3-DEA8-44E1-B6BD-A2E0D7D2FE95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B573F80-4035-45B1-90A2-8ECC0E08BB18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B573F80-4035-45B1-90A2-8ECC0E08BB18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B573F80-4035-45B1-90A2-8ECC0E08BB18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B573F80-4035-45B1-90A2-8ECC0E08BB18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,5 +67,6 @@ Global
 		{D2540F6C-D8C1-42A8-A883-603F705CEF80} = {72211B79-918F-4BC6-9E87-03AEEAFEA3B1}
 		{01285874-7C86-421D-A510-8FB850FEFE64} = {97F5CAC5-2FBA-4ECB-8FDB-EA29E62BEF20}
 		{0F0C0BE3-DEA8-44E1-B6BD-A2E0D7D2FE95} = {EACC530D-523B-4C7E-84F7-5CC7805C809D}
+		{7B573F80-4035-45B1-90A2-8ECC0E08BB18} = {F92AD5D3-6C31-457B-A6B0-63B500EC5987}
 	EndGlobalSection
 EndGlobal
