@@ -14,6 +14,5 @@ namespace NadinSoftTask.Domain.Interfaces
         void Add(Product product);
         void Update(Product product);
         void DeleteById(int id);
-
     }
 }
