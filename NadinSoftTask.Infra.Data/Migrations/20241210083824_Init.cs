@@ -15,15 +15,17 @@ namespace NadinSoftTask.Infra.Data.Migrations
                 name: "Products",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     ProduceDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ManufacturePhone = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ManufactureEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ManufacturePhone = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    ManufactureEmail = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     IsAvailable = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
+                    table.PrimaryKey("PK_Products", x => x.Id);
                 });
         }
 

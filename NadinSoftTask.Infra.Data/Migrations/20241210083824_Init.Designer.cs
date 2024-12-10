@@ -12,8 +12,8 @@ using NadinSoftTask.Infra.Data.Context;
 namespace NadinSoftTask.Infra.Data.Migrations
 {
     [DbContext(typeof(NadinTaskDB))]
-    [Migration("20241210045818_Edit-Annotations")]
-    partial class EditAnnotations
+    [Migration("20241210083824_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,7 +28,10 @@ namespace NadinSoftTask.Infra.Data.Migrations
             modelBuilder.Entity("NadinSoftTask.Domain.Models.Product", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<bool>("IsAvailable")
                         .HasColumnType("bit");
@@ -50,6 +53,8 @@ namespace NadinSoftTask.Infra.Data.Migrations
 
                     b.Property<DateTime>("ProduceDate")
                         .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Products");
                 });
