@@ -10,15 +10,10 @@ using NadinSoftTask.Infra.Data.Context;
 
 namespace NadinSoftTask.Infra.Data.Repository
 {
-    public class ProductRepository : IproductRepository
+    public class ProductRepository(NadinTaskDB dbcontext, IMapper mapper) : IproductRepository
     {
-        private readonly NadinTaskDB _dbcontext;
-        private readonly IMapper _mapper;
-        public ProductRepository(NadinTaskDB dbcontext, IMapper mapper)
-        {
-            _dbcontext = dbcontext;
-            _mapper = mapper;
-        }
+        private readonly NadinTaskDB _dbcontext = dbcontext;
+        private readonly IMapper _mapper = mapper;
 
         public void Add(Product product)
         {
@@ -45,7 +40,9 @@ namespace NadinSoftTask.Infra.Data.Repository
 
         public Product GetById(int id)
         {
+#pragma warning disable CS8603 // Possible null reference return.
             return _dbcontext.Products.Find(id);
+#pragma warning restore CS8603 // Possible null reference return.
         }
 
         public void Update(Product product)

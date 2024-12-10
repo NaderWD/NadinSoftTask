@@ -16,7 +16,7 @@ namespace NadinSoftTask.Domain.Models
         [Required]
         [DisplayName("نام")]
         [MaxLength(255)]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [DisplayName("تاریخ تولید")]
         public DateTime ProduceDate { get; set; }
@@ -24,12 +24,12 @@ namespace NadinSoftTask.Domain.Models
         [Required]
         [DisplayName("تلفن همراه")]
         [MaxLength(255)]
-        public string ManufacturePhone { get; set; }
+        public string? ManufacturePhone { get; set; }
 
         [Required]
         [DisplayName("آدرس ایمیل")]
         [MaxLength(255)]
-        public string ManufactureEmail { get; set; }
+        public string? ManufactureEmail { get; set; }
 
         public bool IsAvailable { get; set; }
     }

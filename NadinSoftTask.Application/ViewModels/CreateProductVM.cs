@@ -9,8 +9,8 @@ namespace NadinSoftTask.Application.ViewModels
 {
     public class CreateProductVM
     {
-        public string Name { get; set; }
-        public PhoneAttribute ManufacturePhone { get; set; }
-        public EmailAddressAttribute ManufactureEmail { get; set; }
+        public string? Name { get; set; }
+        public string? ManufacturePhone { get; set; }
+        public string? ManufactureEmail { get; set; }
     }
 }
